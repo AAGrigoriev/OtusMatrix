@@ -2,13 +2,14 @@
 #include <unordered_map>
 #include "hashFunction.hpp"
 
-template <typename T, T def_v>
+template <typename T, T def_v,typename  std::enable_if<std::is_integral<T>::value>::type>
 class Matrix
 {
 private:
     class Container_Wrapper
     {
     public:
+    
         Container_Wrapper() = default;
         ~Container_Wrapper() = default;
 
