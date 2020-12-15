@@ -23,7 +23,14 @@ int main()
         std::cout << std::endl;
     }
 
-
+    for (auto c : matrix)
+    {
+        int x;
+        int y;
+        int v;
+        std::tie(x, y, v) = c;
+        std::cout << x << y << v << std::endl;
+    }
 
     return 0;
 }
