@@ -4,5 +4,7 @@ SET(SOURCE_WAY src)
 
 add_executable(matrix ${SOURCE_WAY}/main.cpp)
 
+set (CMAKE_CXX_STANDARD 17)
+
 target_include_directories(matrix PRIVATE 
                                   inc)                
