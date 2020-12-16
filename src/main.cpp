@@ -3,7 +3,6 @@
 
 int main()
 {
-
     OtusMatrix::Matrix<int, -1> matrix;
 
     const std::size_t SIZE = 10;

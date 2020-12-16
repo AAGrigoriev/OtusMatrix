@@ -78,11 +78,11 @@ namespace OtusMatrix
                 return container.get(index_row, index_col);
             }
 
-            bool operator==(T other)
+            bool operator==(T other) const
             {
                 return container.get(index_row, index_col) == other;
             }
-
+            
             bool operator!=(T other)
             {
                 return container.get(index_row, index_col) != other;

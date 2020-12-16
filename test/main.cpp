@@ -9,7 +9,7 @@ TEST(matrix, default_value)
   {
     for (std::size_t j = 0; j < 5; j++)
     {
-      ASSERT_EQ(0, matrix[i][j]);
+      ASSERT_EQ(matrix[i][j],0);
     }
   }
   ASSERT_EQ(0, matrix.size());
@@ -17,7 +17,7 @@ TEST(matrix, default_value)
 
 TEST(matrix, add_delete)
 {
-  OtusMatrix::Matrix<int, 0> matrix;
+  OtusMatrix::Matrix<int, -1> matrix;
 
   std::size_t size_matrix = 5;
 
@@ -25,7 +25,7 @@ TEST(matrix, add_delete)
   {
     for (std::size_t j = 0; j < size_matrix; j++)
     {
-      matrix[i][j] = (i * size_matrix) + j;
+      matrix[i][j] = i * size_matrix + j;
     }
   }
 
@@ -33,7 +33,7 @@ TEST(matrix, add_delete)
   {
     for (std::size_t j = 0; j < size_matrix; j++)
     {
-      ASSERT_EQ((i * size_matrix) + j, matrix[i][j]);
+      ASSERT_EQ(matrix[i][j], i * size_matrix + j);
     }
   }
 
@@ -43,7 +43,7 @@ TEST(matrix, add_delete)
   {
     for (std::size_t j = 0; j < size_matrix; j++)
     {
-      matrix[i][j] = 0;
+      matrix[i][j] = -1;
     }
   }
 
@@ -56,7 +56,7 @@ TEST(matrix, multiple_assignment)
 
   ((matrix[0][0] = 314) = 214) = 317;
 
-  ASSERT_EQ(317,matrix[0][0]);
+  ASSERT_EQ(matrix[0][0],317);
 
 }
 
