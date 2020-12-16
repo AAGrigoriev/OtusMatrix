@@ -53,7 +53,7 @@ namespace OtusMatrix
                 return u_map.end();
             }
 
-            size_matrix getSize()
+            size_matrix size()
             {
                 return u_map.size();
             }
@@ -168,9 +168,9 @@ namespace OtusMatrix
             return ProxyRow(index_row, container);
         }
 
-        typename Container_Wrapper::size_matrix getSize()
+        typename Container_Wrapper::size_matrix size()
         {
-            return container.getSize();
+            return container.size();
         }
 
         Iterator begin()
